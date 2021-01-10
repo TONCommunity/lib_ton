@@ -396,7 +396,7 @@ Settings Deserialize(const TLstorage_Settings &data) {
 		return Settings{
 			.main = Deserialize(data.vmain()),
 			.test = Deserialize(data.vtest()), // #TODO postponed
-			.useTestNetwork = true,//Deserialize(data.vuseTestNetwork()),
+			.useTestNetwork = Deserialize(data.vuseTestNetwork()),//Deserialize(data.vuseTestNetwork()),
 			.useNetworkCallbacks = Deserialize(data.vuseNetworkCallbacks()),
 			.version = data.vversion().v
 		};
